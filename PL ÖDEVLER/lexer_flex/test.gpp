@@ -1,0 +1,15 @@
+deffun myFunction(a, b)
+    if a equal b
+        print true
+    else
+        print false
+    exit
+123:45
+569f356
+myVar = 10
+counter = 5 + 3 * 2
+concat(list(1, 2, 3), list(4, 5, 6))
+for i in list(1, 2, 3)
+    print i
+    liste(1,2,3)
+

@@ -1,0 +1,19 @@
+[2025-03-23 12:38:46] Directory "testDir" created successfully.
+[2025-03-23 12:40:13] File "testDir/example.txt" created successfully.
+[2025-03-23 12:41:36] Appended content to file "testDir/example.txt".
+[2025-03-23 12:42:04] Listed contents of directory "testDir".
+[2025-03-23 12:42:48] Read file "testDir/example.txt".
+[2025-03-23 12:43:16] Appended content to file "testDir/example.txt".
+[2025-03-23 12:43:45] File "testDir/example.txt" deleted successfully.
+[2025-03-23 21:31:40] Directory "testDir" created successfully.
+[2025-03-23 21:32:08] File "new_example.txt" created successfully.
+[2025-03-23 21:32:38] Appended content to file "new_example.txt".
+[2025-03-23 21:33:22] Read file "new_example.txt".
+[2025-03-23 21:34:07] File "testDir/Direct_example.txt" created successfully.
+[2025-03-23 21:34:20] File "testDir/Direct_example2.txt" created successfully.
+[2025-03-23 21:34:35] Directory "inner_direct" created successfully.
+[2025-03-23 21:34:54] Directory "testDir/inner_direct" created successfully.
+[2025-03-23 21:35:16] Listed contents of directory "testDir".
+[2025-03-23 21:35:56] Listed files with extension ".txt" in directory "testDir".
+[2025-03-23 21:37:27] Directory "testDir/inner_direct" deleted.
+[2025-03-23 21:37:59] File "testDir/Direct_example.txt" deleted successfully.

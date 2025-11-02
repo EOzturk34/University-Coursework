@@ -1,0 +1,11 @@
+Electronics Shop Inventory Report
+Generated on: 2024-03-25
+---------------------------------------------
+| No. | Category | Name | Price | Quantity |
+---------------------------------------------
+|  1 | Laptop    | monster         | $54,00  | 50       |
+---------------------------------------------
+Summary:
+- Total Number of Devices: 1
+- Total Inventory Value: $54.0
+End of Report

@@ -1,0 +1,105 @@
+CSE 344 Homework #1 Report
+Student Name: Emre Öztürk
+Student ID: 220 104 004 912
+Course: CSE 344 - Systems Programming
+Homework #: 1
+Date: March 23, 2025
+
+
+1. Introduction
+This report documents the implementation of a Secure File and Directory Management System created using C programming language and Linux system calls. The program enables users to create, read, update, and delete files and directories through a command-line interface, with features including directory listing, file filtering by extension, and comprehensive logging of all operations.
+The implementation utilizes low-level system calls, implements file locking for secure writes, uses child processes via fork() for specific operations, and provides detailed error handling throughout.
+
+
+2. Code Explanation
+2.1 Main Program Structure
+Function: main()
+
+Parses command-line arguments to determine which operation to perform
+Validates argument count for each command and calls the appropriate function
+Displays help message when no arguments are provided
+
+2.2 Directory Operations
+Function: createDirectory()
+
+Creates a directory with secure permissions (700)
+Checks if directory already exists before creation
+Logs the operation and displays appropriate messages
+
+Function: listDirectory()
+
+Uses fork() to create a child process for listing directory contents
+Displays files with type indicators (file/directory)
+Parent process waits for child process to complete
+
+Function: listFilesByExtension()
+
+Lists files with specific extension in a given directory
+Implements using a child process with fork()
+
+Function: deleteDirectory()
+
+Deletes an empty directory after verification
+Uses child process for the operation
+
+Function: isDirectoryEmpty()
+
+Checks if a directory contains any files (excluding "." and "..")
+
+2.3 File Operations
+Function: createFile()
+
+Creates a file with secure permissions (600)
+Writes creation timestamp inside the file
+
+Function: readFile()
+
+Displays content of a specified file
+Validates file existence before reading
+
+Function: appendToFile()
+
+Appends content to existing files
+Implements file locking with flock() to prevent simultaneous writes
+
+Function: deleteFile()
+
+Deletes specified file using a child process
+Validates file existence before deletion
+
+2.4 Utility Functions
+Function: writeToLog() - Records operations with timestamps in log.txt
+Function: getCurrentTimestamp() - Generates formatted date/time stamps
+Function: showLogs() - Displays log file contents
+Function: displayHelp() - Shows available commands and usage information
+
+3. Conclusion
+The implemented Secure File and Directory Management System successfully satisfies all assignment requirements using Linux system calls, providing secure file operations with proper error handling and logging.
+Challenges and Solutions:
+
+System Call Implementation
+
+Challenge: Using low-level system calls instead of standard library functions
+Solution: Implemented careful error checking after each call
+
+
+Process Management
+
+Challenge: Coordinating parent-child processes for specific operations
+Solution: Used waitpid() to ensure proper synchronization
+
+
+Security Implementation
+
+Challenge: Implementing secure file permissions and locking
+Solution: Used restrictive file permissions (600/700) and flock() for exclusive access
+
+
+Error Handling
+
+Challenge: Managing various error scenarios consistently
+Solution: Created standardized error reporting patterns throughout the code
+
+
+
+The program successfully demonstrates core systems programming concepts including process creation, file handling, and system call usage in a practical, secure file management application.

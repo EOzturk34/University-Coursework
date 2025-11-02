@@ -1,0 +1,63 @@
+IPC Communication with Daemon Process - Implementation Report
+
+******* TO RUN THE PROGRAM PLEASE USE "make" THEN USE "./ipc_program number_1 number_2" *********
+******* If you are confused you can get help from screenshots ********
+
+Introduction
+This report describes the implementation of a program that demonstrates inter-process communication (IPC) using named pipes (FIFOs) and the creation of a daemon process. The program takes two integer arguments from the command line, creates two child processes that communicate through FIFOs, and uses a daemon process to manage background operations.
+Program Structure
+The program consists of several key components:
+    1. Main process that spawns daemon and child processes 
+    2. Two child processes that communicate via FIFOs 
+    3. A daemon process that handles background operations and logging 
+    4. Signal handlers for process management 
+    5. Monitoring mechanisms for child processes 
+Core Functions
+Main Function
+The entry point function: main(int argc, char *argv[])
+It verifies command line arguments, calculates the larger number, prevents zombie processes, daemonizes the process, creates FIFOs and child processes, and manages the parent process loop.
+Daemon Creation
+Function: daemonize()
+Transforms the parent process into a daemon by:
+    • Forking to create a child process and exiting the parent 
+    • Creating a new session with setsid() 
+    • Setting up the logging system 
+    • Redirecting standard file descriptors 
+    • Setting up signal handlers 
+FIFO Operations
+Function: create_fifos() Creates two named pipes (FIFOs) for inter-process communication, handling existing FIFOs and error conditions.
+Function: write_to_fifo(int num1, int num2) Writes the two integers to the first FIFO for child process 1 to read.
+Child Process Management
+Function: create_child_processes() Creates two child processes using fork(), sets up signal handling for child termination, and tracks child process information.
+Function: child1_process() The first child process:
+    • Reads two integers from the first FIFO 
+    • Determines the larger number 
+    • Writes the command and larger number to the second FIFO 
+Function: child2_process() The second child process:
+    • Reads the command and larger number from the second FIFO 
+    • Displays the larger number 
+Signal Handling
+Function: setup_daemon_signals() Sets up signal handlers for SIGUSR1, SIGHUP, and SIGTERM signals.
+Function: handle_sigchld(int sig) Handles child process termination, updating counters and logging termination details.
+Function: handle_sigusr1(int sig) Reports the status of child processes when receiving SIGUSR1 signal.
+Function: handle_sighup(int sig) Reloads configuration (reopens log file) when receiving SIGHUP signal.
+Function: handle_sigterm(int sig) Performs shutdown when receiving SIGTERM signal.
+Monitoring and Error Handling
+Function: monitor_child_processes() Monitors child processes for timeouts and terminates unresponsive processes.
+Function: error_handler(const char* message) Handles errors by displaying error messages and terminating the process.
+Logging System
+Function: setup_daemon_logger() Initializes the logging system by opening a log file.
+Function: log_event(const char* event_type, const char* message) Logs events with timestamps to the log file.
+Function: redirect_std_fds() Redirects standard file descriptors to /dev/null and the log file.
+Resource Management
+Function: cleanup_resources() Cleans up resources (FIFOs, log file) when the program terminates.
+Parent Loop
+Function: parent_loop() Implements the main loop of the parent process, monitoring child processes and handling timeout conditions.
+Zombie Prevention
+Function: prevent_zombie() Prevents zombie processes by setting SA_NOCLDWAIT flag for SIGCHLD signal.
+Non-Blocking FIFO Operations
+Function: setup_nonblocking_fifo(int fd) Sets a FIFO to non-blocking mode to avoid deadlocks.
+Conclusion
+The implemented program successfully demonstrates IPC communication between processes using named pipes, daemon process creation, and signal handling. The daemon process properly manages background operations and logging, while the child processes communicate to determine and display the larger of two input integers.
+The program also includes error handling, resource cleanup, zombie process prevention, and monitoring mechanisms for unresponsive child processes, making it robust in various scenarios.
+

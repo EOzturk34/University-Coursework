@@ -1,0 +1,108 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do quiz_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 {C:/Users/PC/Desktop/ProjectExam1/subtractor_32bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module subtractor_32bit
+# 
+# Top level modules:
+# 	subtractor_32bit
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 {C:/Users/PC/Desktop/ProjectExam1/mux_8to1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_8to1
+# 
+# Top level modules:
+# 	mux_8to1
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 {C:/Users/PC/Desktop/ProjectExam1/full_adder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 {C:/Users/PC/Desktop/ProjectExam1/bitwise_xor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bitwise_xor
+# 
+# Top level modules:
+# 	bitwise_xor
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 {C:/Users/PC/Desktop/ProjectExam1/bitwise_or.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bitwise_or
+# 
+# Top level modules:
+# 	bitwise_or
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 {C:/Users/PC/Desktop/ProjectExam1/bitwise_nor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bitwise_nor
+# 
+# Top level modules:
+# 	bitwise_nor
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 {C:/Users/PC/Desktop/ProjectExam1/bitwise_and.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bitwise_and
+# 
+# Top level modules:
+# 	bitwise_and
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 {C:/Users/PC/Desktop/ProjectExam1/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 {C:/Users/PC/Desktop/ProjectExam1/adder_32bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder_32bit
+# 
+# Top level modules:
+# 	adder_32bit
+# 
+vlog -reportprogress 300 -work work C:/Users/PC/Desktop/ProjectExam1/alu_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu_tb
+# 
+# Top level modules:
+# 	alu_tb
+vsim work.alu_tb
+# vsim work.alu_tb 
+# Loading work.alu_tb
+# Loading work.alu
+# Loading work.adder_32bit
+# Loading work.full_adder
+# Loading work.subtractor_32bit
+# Loading work.bitwise_and
+# Loading work.bitwise_or
+# Loading work.bitwise_xor
+# Loading work.bitwise_nor
+# Loading work.mux_8to1
+# ** Warning: (vsim-3015) C:/Users/PC/Desktop/ProjectExam1/alu.v(33): [PCDPC] - Port size (3 or 3) does not match connection size (4) for port 'sel'. The port definition is at: C:/Users/PC/Desktop/ProjectExam1/mux_8to1.v(10).
+# 
+#         Region: /alu_tb/uut/mux
+add wave -position insertpoint  \
+sim:/alu_tb/a \
+sim:/alu_tb/b \
+sim:/alu_tb/alu_op \
+sim:/alu_tb/result
+run -all
+# Time = 0, a = 06a0a5a5, b = 0a5a6a5a, alu_op = 0000, result = 00fa8fff
+# Time = 10, a = 0000000f, b = 00000001, alu_op = 0001, result = ffffffed
+# Time = 20, a = 000000ff, b = 0000ffff, alu_op = 0010, result = 000000ff
+# Time = 30, a = ff00ff00, b = 00ff00ff, alu_op = 0011, result = ffffffff
+# Time = 40, a = 11111111, b = 00000000, alu_op = 0100, result = 11111111
+# Time = 50, a = ffffffff, b = 12345678, alu_op = 0101, result = 00000000
+# Break in Module alu_tb at C:/Users/PC/Desktop/ProjectExam1/alu_tb.v line 52
+run -all
+add wave -position insertpoint  \
+sim:/alu_tb/a \
+sim:/alu_tb/b \
+sim:/alu_tb/alu_op \
+sim:/alu_tb/result
+run -all

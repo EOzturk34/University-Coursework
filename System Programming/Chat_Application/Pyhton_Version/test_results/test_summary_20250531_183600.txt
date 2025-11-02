@@ -1,0 +1,29 @@
+Test Summary - 20250531_183600
+=========================
+
+PASS: Valid username accepted
+PASS: Invalid username rejected correctly
+PASS: Duplicate username rejected
+FAIL: Room broadcast not working
+PASS: Room leave working
+FAIL: Whisper not working
+PASS: File transfer completed
+PASS: Invalid commands handled
+PASS: Help command working
+FAIL: Graceful exit not working
+PASS: File upload queue functioning
+PASS: Server handling multiple connections
+PASS: Server 30 user limit enforced
+PASS: Room 15 user capacity limit enforced
+PASS: 16 character username accepted
+PASS: Over 16 character username rejected
+PASS: 3MB file size limit enforced
+PASS: Duplicate filename conflict handled
+PASS: SIGINT test noted for manual testing
+FAIL: Room switching not working properly
+PASS: Whisper to non-existent user handled
+PASS: Broadcast without room rejected
+PASS: Complex multi-user interaction working
+
+Total Passed: 19
+Total Failed: 4

@@ -1,0 +1,11 @@
+Connecting to 127.0.0.1:8080...
+[32mConnected to server!
+[0m
+Enter your username: [32m[Server]: Welcome! Type /help for commands.
+[0mCommands:
+/join <room_name> - Join or create a room
+/leave - Leave current room
+/broadcast <message> - Send message to room
+/whisper <username> <message> - Send private message
+/sendfile <filename> <username> - Send file to user
+/exit - Disconnect from server

@@ -1,0 +1,366 @@
+# GTU-C312 Operating System with Threads
+# Simple OS that starts threads sequentially
+
+Begin Data Section
+# Registers (0-20)
+0 100    # PC
+1 19999  # Stack pointer
+2 0      # System call result
+3 0      # Instruction count
+4 0      # Current thread ID
+5 0      # Temp register
+6 0      # Temp register
+7 0      # Temp register
+8 0      # Temp register
+9 0      # Temp register
+10 0
+11 0
+12 0
+13 0
+14 0
+15 0
+16 0
+17 0
+18 0
+19 0
+20 0
+
+# OS Data - Thread Table (30-89)
+30 1     # Thread 1 ID
+31 0     # State
+32 1000  # PC
+33 1999  # Stack pointer
+34 0
+35 0
+36 0
+37 0
+38 0
+39 0
+
+40 2     # Thread 2 ID
+41 0     # State
+42 2000  # PC
+43 2999  # Stack pointer
+44 0
+45 0
+46 0
+47 0
+48 0
+49 0
+
+50 3     # Thread 3 ID
+51 0     # State
+52 3000  # PC
+53 3999  # Stack pointer
+54 0
+55 0
+56 0
+57 0
+58 0
+59 0
+
+# Thread 1 Data - Bubble Sort (1000-1099)
+1010 5      # N = 5
+1011 64     # Array[0]
+1012 34     # Array[1]
+1013 25     # Array[2]
+1014 12     # Array[3]
+1015 22     # Array[4]
+1016 0      # unused
+1017 0      # i
+1018 0      # j
+1019 0      # temp for calculations
+1090 0      # temp for swaps
+
+# Thread 2 Data - Linear Search (2000-2099)
+2010 5      # N = 5
+2011 25     # Key to search
+2012 64     # Array[0]
+2013 34     # Array[1]
+2014 25     # Array[2]
+2015 12     # Array[3]
+2016 22     # Array[4]
+2017 -1     # Result
+2018 0      # counter
+
+# Thread 3 Data - Fibonacci (3000-3099)
+3010 10     # How many
+3011 0      # F(n-2)
+3012 1      # F(n-1)
+3013 0      # F(n)
+3014 0      # counter
+
+End Data Section
+
+Begin Instruction Section
+# OS Entry Point
+100 SET 32 5     # Thread 1 PC
+101 USER 5       # Start Thread 1
+
+# ===== THREAD 1: BUBBLE SORT (1000-1999) =====
+# Very simple bubble sort without any complex addressing
+1000 SET 4 1019  # Number of passes (N-1)
+
+# Pass 1
+1001 CPY 1011 5  # arr[0]
+1002 CPY 1012 6  # arr[1]
+1003 SUBI 5 6    # arr[0] - arr[1]
+1004 JIF 6 1008  # No swap needed
+1005 CPY 1011 1090  # temp = arr[0]
+1006 CPY 1012 1011  # arr[0] = arr[1]
+1007 CPY 1090 1012  # arr[1] = temp
+
+1008 CPY 1012 5  # arr[1]
+1009 CPY 1013 6  # arr[2]
+1010 SUBI 5 6    # arr[1] - arr[2]
+1011 JIF 6 1015  # No swap needed
+1012 CPY 1012 1090  # temp = arr[1]
+1013 CPY 1013 1012  # arr[1] = arr[2]
+1014 CPY 1090 1013  # arr[2] = temp
+
+1015 CPY 1013 5  # arr[2]
+1016 CPY 1014 6  # arr[3]
+1017 SUBI 5 6    # arr[2] - arr[3]
+1018 JIF 6 1022  # No swap needed
+1019 CPY 1013 1090  # temp = arr[2]
+1020 CPY 1014 1013  # arr[2] = arr[3]
+1021 CPY 1090 1014  # arr[3] = temp
+
+1022 CPY 1014 5  # arr[3]
+1023 CPY 1015 6  # arr[4]
+1024 SUBI 5 6    # arr[3] - arr[4]
+1025 JIF 6 1029  # No swap needed
+1026 CPY 1014 1090  # temp = arr[3]
+1027 CPY 1015 1014  # arr[3] = arr[4]
+1028 CPY 1090 1015  # arr[4] = temp
+
+1029 SYSCALL YIELD
+
+# Pass 2
+1030 CPY 1011 5  # arr[0]
+1031 CPY 1012 6  # arr[1]
+1032 SUBI 5 6    # arr[0] - arr[1]
+1033 JIF 6 1037  # No swap needed
+1034 CPY 1011 1090  # temp = arr[0]
+1035 CPY 1012 1011  # arr[0] = arr[1]
+1036 CPY 1090 1012  # arr[1] = temp
+
+1037 CPY 1012 5  # arr[1]
+1038 CPY 1013 6  # arr[2]
+1039 SUBI 5 6    # arr[1] - arr[2]
+1040 JIF 6 1044  # No swap needed
+1041 CPY 1012 1090  # temp = arr[1]
+1042 CPY 1013 1012  # arr[1] = arr[2]
+1043 CPY 1090 1013  # arr[2] = temp
+
+1044 CPY 1013 5  # arr[2]
+1045 CPY 1014 6  # arr[3]
+1046 SUBI 5 6    # arr[2] - arr[3]
+1047 JIF 6 1051  # No swap needed
+1048 CPY 1013 1090  # temp = arr[2]
+1049 CPY 1014 1013  # arr[2] = arr[3]
+1050 CPY 1090 1014  # arr[3] = temp
+
+1051 SYSCALL YIELD
+
+# Pass 3
+1052 CPY 1011 5  # arr[0]
+1053 CPY 1012 6  # arr[1]
+1054 SUBI 5 6    # arr[0] - arr[1]
+1055 JIF 6 1059  # No swap needed
+1056 CPY 1011 1090  # temp = arr[0]
+1057 CPY 1012 1011  # arr[0] = arr[1]
+1058 CPY 1090 1012  # arr[1] = temp
+
+1059 CPY 1012 5  # arr[1]
+1060 CPY 1013 6  # arr[2]
+1061 SUBI 5 6    # arr[1] - arr[2]
+1062 JIF 6 1066  # No swap needed
+1063 CPY 1012 1090  # temp = arr[1]
+1064 CPY 1013 1012  # arr[1] = arr[2]
+1065 CPY 1090 1013  # arr[2] = temp
+
+1066 SYSCALL YIELD
+
+# Pass 4
+1067 CPY 1011 5  # arr[0]
+1068 CPY 1012 6  # arr[1]
+1069 SUBI 5 6    # arr[0] - arr[1]
+1070 JIF 6 1074  # No swap needed
+1071 CPY 1011 1090  # temp = arr[0]
+1072 CPY 1012 1011  # arr[0] = arr[1]
+1073 CPY 1090 1012  # arr[1] = temp
+
+1074 SYSCALL YIELD
+
+# Print sorted array
+1075 SYSCALL PRN 1011  # arr[0]
+1076 SYSCALL PRN 1012  # arr[1]
+1077 SYSCALL PRN 1013  # arr[2]
+1078 SYSCALL PRN 1014  # arr[3]
+1079 SYSCALL PRN 1015  # arr[4]
+
+1080 SYSCALL HLT
+
+# ===== THREAD 2: LINEAR SEARCH (2000-2999) =====
+2000 SET -1 2017  # result = -1 (not found initially)
+
+# Check element 0
+2001 CPY 2012 5  # arr[0]
+2002 CPY 2011 6  # key
+2003 CPY 5 7     # save arr[0] in register 7
+2004 CPY 6 8     # save key in register 8
+2005 SUBI 5 6    # arr[0] - key, result in register 6
+2006 JIF 6 2014  # if arr[0] > key, skip to next
+2007 CPY 8 5     # restore key to register 5
+2008 CPY 7 6     # restore arr[0] to register 6
+2009 SUBI 5 6    # key - arr[0], result in register 6
+2010 JIF 6 2014  # if key > arr[0], skip to next
+2011 SET 0 2017  # Found at index 0
+2012 SET -1 5    # For jump
+2013 JIF 5 2060  # Jump to done
+
+# Check element 1
+2014 CPY 2013 5  # arr[1]
+2015 CPY 2011 6  # key
+2016 CPY 5 7     # save arr[1] in register 7
+2017 CPY 6 8     # save key in register 8
+2018 SUBI 5 6    # arr[1] - key, result in register 6
+2019 JIF 6 2027  # if arr[1] > key, skip to next
+2020 CPY 8 5     # restore key to register 5
+2021 CPY 7 6     # restore arr[1] to register 6
+2022 SUBI 5 6    # key - arr[1], result in register 6
+2023 JIF 6 2027  # if key > arr[1], skip to next
+2024 SET 1 2017  # Found at index 1
+2025 SET -1 5    # For jump
+2026 JIF 5 2070  # Jump to done
+
+# Check element 2
+2027 CPY 2014 5  # arr[2]
+2028 CPY 2011 6  # key
+2029 CPY 5 7     # save arr[2] in register 7
+2030 CPY 6 8     # save key in register 8
+2031 SUBI 5 6    # arr[2] - key, result in register 6
+2032 JIF 6 2040  # if arr[2] > key, skip to next
+2033 CPY 8 5     # restore key to register 5
+2034 CPY 7 6     # restore arr[2] to register 6
+2035 SUBI 5 6    # key - arr[2], result in register 6
+2036 JIF 6 2040  # if key > arr[2], skip to next
+2037 SET 2 2017  # Found at index 2
+2038 SET -1 5    # For jump
+2039 JIF 5 2070  # Jump to done
+
+# Check element 3
+2040 CPY 2015 5  # arr[3]
+2041 CPY 2011 6  # key
+2042 CPY 5 7     # save arr[3] in register 7
+2043 CPY 6 8     # save key in register 8
+2044 SUBI 5 6    # arr[3] - key, result in register 6
+2045 JIF 6 2053  # if arr[3] > key, skip to next
+2046 CPY 8 5     # restore key to register 5
+2047 CPY 7 6     # restore arr[3] to register 6
+2048 SUBI 5 6    # key - arr[3], result in register 6
+2049 JIF 6 2053  # if key > arr[3], skip to next
+2050 SET 3 2017  # Found at index 3
+2051 SET -1 5    # For jump
+2052 JIF 5 2070  # Jump to done
+
+# Check element 4
+2053 CPY 2016 5  # arr[4]
+2054 CPY 2011 6  # key
+2055 CPY 5 7     # save arr[4] in register 7
+2056 CPY 6 8     # save key in register 8
+2057 SUBI 5 6    # arr[4] - key, result in register 6
+2058 JIF 6 2066  # if arr[4] > key, skip to end
+2059 CPY 8 5     # restore key to register 5
+2060 CPY 7 6     # restore arr[4] to register 6
+2061 SUBI 5 6    # key - arr[4], result in register 6
+2062 JIF 6 2066  # if key > arr[4], skip to end
+2063 SET 4 2017  # Found at index 4
+2064 SET -1 5    # For jump
+2065 JIF 5 2070  # Jump to done
+
+2066 SET -1 5    # Dummy for alignment
+2067 SET -1 5    # Dummy for alignment
+2068 SET -1 5    # Dummy for alignment
+2069 SET -1 5    # Dummy for alignment
+
+2070 SYSCALL PRN 2017  # Print result
+2071 SYSCALL HLT
+
+# ===== THREAD 3: FIBONACCI (3000-3999) =====
+3000 SET 0 3011  # F(0) = 0
+3001 SET 1 3012  # F(1) = 1
+3002 SET 0 3014  # counter = 0
+
+3003 SYSCALL PRN 3011  # Print F(0)
+3004 SYSCALL PRN 3012  # Print F(1)
+
+# Generate 8 more numbers
+3005 SET 2 3014  # counter = 2
+
+# F(2)
+3006 CPY 3011 5  # F(0)
+3007 ADDI 5 3012 # F(0) + F(1)
+3008 CPY 5 3013  # F(2) = result
+3009 SYSCALL PRN 3013
+3010 CPY 3012 3011  # F(0) = F(1)
+3011 CPY 3013 3012  # F(1) = F(2)
+
+# F(3)
+3012 CPY 3011 5  # F(1)
+3013 ADDI 5 3012 # F(1) + F(2)
+3014 CPY 5 3013  # F(3) = result
+3015 SYSCALL PRN 3013
+3016 CPY 3012 3011  # F(1) = F(2)
+3017 CPY 3013 3012  # F(2) = F(3)
+
+# F(4)
+3018 CPY 3011 5  # F(2)
+3019 ADDI 5 3012 # F(2) + F(3)
+3020 CPY 5 3013  # F(4) = result
+3021 SYSCALL PRN 3013
+3022 CPY 3012 3011  # F(2) = F(3)
+3023 CPY 3013 3012  # F(3) = F(4)
+
+# F(5)
+3024 CPY 3011 5  # F(3)
+3025 ADDI 5 3012 # F(3) + F(4)
+3026 CPY 5 3013  # F(5) = result
+3027 SYSCALL PRN 3013
+3028 CPY 3012 3011  # F(3) = F(4)
+3029 CPY 3013 3012  # F(4) = F(5)
+
+# F(6)
+3030 CPY 3011 5  # F(4)
+3031 ADDI 5 3012 # F(4) + F(5)
+3032 CPY 5 3013  # F(6) = result
+3033 SYSCALL PRN 3013
+3034 CPY 3012 3011  # F(4) = F(5)
+3035 CPY 3013 3012  # F(5) = F(6)
+
+# F(7)
+3036 CPY 3011 5  # F(5)
+3037 ADDI 5 3012 # F(5) + F(6)
+3038 CPY 5 3013  # F(7) = result
+3039 SYSCALL PRN 3013
+3040 CPY 3012 3011  # F(5) = F(6)
+3041 CPY 3013 3012  # F(6) = F(7)
+
+# F(8)
+3042 CPY 3011 5  # F(6)
+3043 ADDI 5 3012 # F(6) + F(7)
+3044 CPY 5 3013  # F(8) = result
+3045 SYSCALL PRN 3013
+3046 CPY 3012 3011  # F(6) = F(7)
+3047 CPY 3013 3012  # F(7) = F(8)
+
+# F(9)
+3048 CPY 3011 5  # F(7)
+3049 ADDI 5 3012 # F(7) + F(8)
+3050 CPY 5 3013  # F(9) = result
+3051 SYSCALL PRN 3013 
+
+3052 SYSCALL HLT
+
+End Instruction Section

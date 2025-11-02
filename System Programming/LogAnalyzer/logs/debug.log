@@ -1,0 +1,13 @@
+[2025-05-11 08:00:00] DEBUG: Application starting up
+[2025-05-11 08:00:01] INFO: Loading configuration
+[2025-05-11 08:00:02] DEBUG: Configuration loaded successfully
+[2025-05-11 08:00:03] DEBUG: Connecting to database
+[2025-05-11 08:00:04] FAIL: Database connection failed, retrying
+[2025-05-11 08:00:05] DEBUG: Retrying database connection
+[2025-05-11 08:00:06] INFO: Database connected successfully
+[2025-05-11 08:00:07] DEBUG: Initializing services
+[2025-05-11 08:00:08] DEBUG: Services initialized
+[2025-05-11 08:00:09] INFO: Application ready
+[2025-05-11 08:00:10] DEBUG: Received request from client
+[2025-05-11 08:00:11] FAIL: Authentication failed for user
+[2025-05-11 08:00:12] DEBUG: Failed login attempt logged

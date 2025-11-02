@@ -1,0 +1,82 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do quiz3_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/cse331p2 {C:/Users/PC/Desktop/cse331p2/SingleCycleMIPS.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SingleCycleMIPS
+# 
+# Top level modules:
+# 	SingleCycleMIPS
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/cse331p2 {C:/Users/PC/Desktop/cse331p2/PcModule.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PcModule
+# 
+# Top level modules:
+# 	PcModule
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/cse331p2 {C:/Users/PC/Desktop/cse331p2/ControlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/cse331p2 {C:/Users/PC/Desktop/cse331p2/AluModule.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module AluModule
+# 
+# Top level modules:
+# 	AluModule
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/cse331p2 {C:/Users/PC/Desktop/cse331p2/RegisterFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/cse331p2 {C:/Users/PC/Desktop/cse331p2/InstructionFetch.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module InstructionFetch
+# 
+# Top level modules:
+# 	InstructionFetch
+# vlog -vlog01compat -work work +incdir+C:/Users/PC/Desktop/cse331p2 {C:/Users/PC/Desktop/cse331p2/DataMemory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# 
+vlog -reportprogress 300 -work work C:/Users/PC/Desktop/cse331p2/Tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Tb
+# 
+# Top level modules:
+# 	Tb
+vsim work.Tb
+# vsim work.Tb 
+# Loading work.Tb
+# Loading work.SingleCycleMIPS
+# Loading work.PcModule
+# Loading work.InstructionFetch
+# Loading work.RegisterFile
+# Loading work.AluModule
+# Loading work.DataMemory
+# Loading work.ControlUnit
+add wave -position insertpoint  \
+sim:/Tb/clk \
+sim:/Tb/rst \
+sim:/Tb/i \
+sim:/Tb/file
+run
+run -all
+# Break in Module Tb at C:/Users/PC/Desktop/cse331p2/Tb.v line 49
+run -all
+# Break key hit 
+# Simulation stop requested.

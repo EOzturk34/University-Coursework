@@ -1,0 +1,57 @@
+2025-05-31 21:51:52 - [INFO] Server listening on port 8080...
+2025-05-31 21:51:52 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:51:52 - [INFO] File upload worker thread 1 started
+2025-05-31 21:51:52 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:51:52 - [INFO] File upload worker thread 2 started
+2025-05-31 21:51:52 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:51:52 - [INFO] File upload worker thread 3 started
+2025-05-31 21:51:52 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:51:52 - [INFO] File upload worker thread 4 started
+2025-05-31 21:51:52 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:51:52 - [INFO] File upload worker thread 5 started
+2025-05-31 21:51:57 - [LOGIN] user 'emre' connected from 127.0.0.1
+2025-05-31 21:52:01 - [JOIN] user 'emre' joined room 'room2'
+2025-05-31 21:52:04 - [DISCONNECT] Client emre disconnected.
+2025-05-31 21:52:04 - [DISCONNECT] user 'emre' lost connection. Cleaned up resources.
+2025-05-31 21:52:04 - [SHUTDOWN] SIGINT received. Disconnecting 0 clients, saving logs.
+2025-05-31 21:53:41 - [INFO] Server listening on port 5000...
+2025-05-31 21:53:41 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:53:41 - [INFO] File upload worker thread 1 started
+2025-05-31 21:53:41 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:53:41 - [INFO] File upload worker thread 2 started
+2025-05-31 21:53:41 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:53:41 - [INFO] File upload worker thread 3 started
+2025-05-31 21:53:41 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:53:41 - [INFO] File upload worker thread 4 started
+2025-05-31 21:53:41 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 21:53:41 - [INFO] File upload worker thread 5 started
+2025-05-31 21:53:51 - [LOGIN] user 'emre' connected from 127.0.0.1
+2025-05-31 21:54:14 - [JOIN] user 'emre' joined room 'room10'
+2025-05-31 21:54:19 - [ROOM] user 'emre' left room 'room10', joined 'room20'
+2025-05-31 21:54:23 - [LEAVE] user 'emre' left room 'room20'
+2025-05-31 21:54:26 - [ROOM] user 'emre' rejoined 'room10'
+2025-05-31 21:54:45 - [REJECTED] Duplicate username attempted: emre
+2025-05-31 21:54:51 - [LOGIN] user 'nil' connected from 127.0.0.1
+2025-05-31 21:54:59 - [JOIN] user 'nil' joined room 'room10'
+2025-05-31 21:55:10 - [COMMAND] nil initiated file transfer of 'test.txt' (2.23 MB) to emre
+2025-05-31 21:55:10 - [FILE-QUEUE] Upload 'test.txt' from nil added to queue. Queue size: 0
+2025-05-31 21:55:10 - [FILE] Starting upload of 'test.txt' from nil to emre (2.23 MB)
+2025-05-31 21:55:15 - [SEND FILE] 'test.txt' sent from nil to emre (success) - 2.23 MB
+2025-05-31 21:55:22 - [WHISPER] from 'nil' to 'emre': naber
+2025-05-31 21:55:38 - [BROADCAST] user 'nil': merhaba
+2025-05-31 22:10:00 - [INFO] Server listening on port 8080...
+2025-05-31 22:10:00 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 22:10:00 - [INFO] File upload worker thread 1 started
+2025-05-31 22:10:00 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 22:10:00 - [INFO] File upload worker thread 2 started
+2025-05-31 22:10:00 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 22:10:00 - [INFO] File upload worker thread 3 started
+2025-05-31 22:10:00 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 22:10:00 - [INFO] File upload worker thread 4 started
+2025-05-31 22:10:00 - [INFO] File upload worker thread started and waiting for files
+2025-05-31 22:10:00 - [INFO] File upload worker thread 5 started
+2025-05-31 22:10:17 - [LOGIN] user 'emre' connected from 127.0.0.1
+2025-05-31 22:10:25 - [JOIN] user 'emre' joined room 'room2'
+2025-05-31 22:10:26 - [DISCONNECT] Client emre disconnected.
+2025-05-31 22:10:26 - [DISCONNECT] user 'emre' lost connection. Cleaned up resources.
+2025-05-31 22:10:28 - [SHUTDOWN] SIGINT received. Disconnecting 0 clients, saving logs.

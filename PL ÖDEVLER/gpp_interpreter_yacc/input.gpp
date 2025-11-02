@@ -1,0 +1,7 @@
+;; Bu bir yorum satırıdır
+(set x 10)
+(set y (+ x 5))
+(if (< x 15) (set y 20) (set y 30))
+(load "testfile.gpp")
+(exit)
+asdas

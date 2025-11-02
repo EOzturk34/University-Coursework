@@ -1,0 +1,172 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\PC\Desktop\Quiz3\simulation\modelsim
+vAluModule
+IT@]ih<zM1d3Kg16kWFbYg3
+VTMaJe6W2G;`TKFf?VbaeE1
+Z1 dC:\Users\PC\Desktop\Quiz3\simulation\modelsim
+w1734384289
+8C:/Users/PC/Desktop/cse331p2/AluModule.v
+FC:/Users/PC/Desktop/cse331p2/AluModule.v
+L0 4
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/PC/Desktop/cse331p2 -O0
+n@alu@module
+!i10b 1
+!s100 ]jT10niHnKkKM_`^;GNCK3
+!s85 0
+!s108 1734597147.429000
+!s107 C:/Users/PC/Desktop/cse331p2/AluModule.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/cse331p2|C:/Users/PC/Desktop/cse331p2/AluModule.v|
+!s101 -O0
+vControlUnit
+IYXZ:8Ph[zQbbcC_XE@RVj1
+VC7X^jfnjLh?5lWbb8[[LC2
+R1
+w1734596924
+8C:/Users/PC/Desktop/cse331p2/ControlUnit.v
+FC:/Users/PC/Desktop/cse331p2/ControlUnit.v
+L0 4
+R2
+r1
+31
+R3
+R4
+n@control@unit
+!i10b 1
+!s100 oN?G^nl:`TX8VlL=@6RaK0
+!s85 0
+!s108 1734597147.331000
+!s107 C:/Users/PC/Desktop/cse331p2/ControlUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/cse331p2|C:/Users/PC/Desktop/cse331p2/ControlUnit.v|
+!s101 -O0
+vDataMemory
+I`H=@bQR4gjMfl@SJ2]DZe2
+VIF?>>ddan4cU6Oj_j4ETi2
+R1
+w1734372896
+8C:/Users/PC/Desktop/cse331p2/DataMemory.v
+FC:/Users/PC/Desktop/cse331p2/DataMemory.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@data@memory
+!i10b 1
+!s100 NjkahNc^8^]O35490NBH02
+!s85 0
+!s108 1734597147.735000
+!s107 C:/Users/PC/Desktop/cse331p2/DataMemory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/cse331p2|C:/Users/PC/Desktop/cse331p2/DataMemory.v|
+!s101 -O0
+vInstructionFetch
+IjFQF<4b_T4K0i[T>J82gZ0
+V89SiankMPJn4Vid3Adj6=3
+R1
+w1734379369
+8C:/Users/PC/Desktop/cse331p2/InstructionFetch.v
+FC:/Users/PC/Desktop/cse331p2/InstructionFetch.v
+L0 4
+R2
+r1
+31
+R3
+R4
+n@instruction@fetch
+!i10b 1
+!s100 0BiSOQ7UTicFRkBScTEUn1
+!s85 0
+!s108 1734597147.644000
+!s107 C:/Users/PC/Desktop/cse331p2/InstructionFetch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/cse331p2|C:/Users/PC/Desktop/cse331p2/InstructionFetch.v|
+!s101 -O0
+vPcModule
+IUX1Y@<T1XW<]UWKHZ_db`1
+VbVjEYh@kCPo=4a563;hF@1
+R1
+w1734384348
+8C:/Users/PC/Desktop/cse331p2/PcModule.v
+FC:/Users/PC/Desktop/cse331p2/PcModule.v
+L0 2
+R2
+r1
+31
+R3
+R4
+n@pc@module
+!i10b 1
+!s100 BQ0hG;JM_kBl7n^04[ZUM3
+!s85 0
+!s108 1734597147.232000
+!s107 C:/Users/PC/Desktop/cse331p2/PcModule.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/cse331p2|C:/Users/PC/Desktop/cse331p2/PcModule.v|
+!s101 -O0
+vRegisterFile
+IgBZz>l`2Za42>[PL^^60[0
+V8F>PfAQn0HFEL@=:M_7BB1
+R1
+w1734379657
+8C:/Users/PC/Desktop/cse331p2/RegisterFile.v
+FC:/Users/PC/Desktop/cse331p2/RegisterFile.v
+L0 2
+R2
+r1
+31
+R3
+R4
+n@register@file
+!i10b 1
+!s100 8WC;1khkoU]FCAd6GnC:_1
+!s85 0
+!s108 1734597147.540000
+!s107 C:/Users/PC/Desktop/cse331p2/RegisterFile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/cse331p2|C:/Users/PC/Desktop/cse331p2/RegisterFile.v|
+!s101 -O0
+vSingleCycleMIPS
+IW5g`3Z@E>OcVm1iz4OK]P3
+V@jghf0b5m1FR0zZ>H6:J50
+R1
+w1734596552
+8C:/Users/PC/Desktop/cse331p2/SingleCycleMIPS.v
+FC:/Users/PC/Desktop/cse331p2/SingleCycleMIPS.v
+L0 3
+R2
+r1
+31
+R3
+n@single@cycle@m@i@p@s
+R4
+!i10b 1
+!s100 Lb^?UEMm<`bH6H_`8Z1f11
+!s85 0
+!s108 1734597147.085000
+!s107 C:/Users/PC/Desktop/cse331p2/SingleCycleMIPS.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/cse331p2|C:/Users/PC/Desktop/cse331p2/SingleCycleMIPS.v|
+!s101 -O0
+vTb
+!i10b 1
+!s100 0J>kXB]hf7aMiIcaIcKZn0
+IE=Q7jj;IXOVHeEc_4OcT12
+VLAcJ:4e=S?Zm1Pj4n<iDm2
+R1
+w1734374360
+8C:/Users/PC/Desktop/cse331p2/Tb.v
+FC:/Users/PC/Desktop/cse331p2/Tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1734597159.685000
+!s107 C:/Users/PC/Desktop/cse331p2/Tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/PC/Desktop/cse331p2/Tb.v|
+!s101 -O0
+o-work work -O0
+n@tb

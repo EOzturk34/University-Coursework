@@ -1,0 +1,47 @@
+Connecting to 127.0.0.1:8080...
+[32mConnected to server!
+[0m
+Enter your username: [32m[Server]: Welcome! Type /help for commands.
+[0m[34m[Server]: Incoming file from sender1: 'file1.pdf' (1.36 MB)
+[0m[34m[Server]: Incoming file from sender2: 'file2.pdf' (2.13 MB)
+[0m[34m[Server]: Incoming file from sender3: 'file3.pdf' (1.34 MB)
+[0m[34m[Server]: Incoming file from sender4: 'file4.pdf' (2.07 MB)
+[0m[34m[Status]: Download progress: 25%
+[34m[Server]: Incoming file from sender5: 'file5.pdf' (1.24 MB)
+[0m[34m[Status]: Download progress: 25%
+[34m[Status]: Download progress: 25%
+[34m[Status]: Download progress: 25%
+[34m[Status]: Download progress: 50%
+[34m[Status]: Download progress: 25%
+[34m[Status]: Download progress: 50%
+[34m[Status]: Download progress: 50%
+[34m[Status]: Download progress: 75%
+[34m[Status]: Download progress: 75%
+[34m[Status]: Download progress: 50%
+[34m[Status]: Download progress: 50%
+[34m[Status]: Download progress: 75%
+[34m[Status]: Download progress: 100%
+[32m[Server]: '[Received]' 'file1.pdf' from 'sender1' (1.36 MB)
+[0m[32m[Server]: File saved as: downloads/sender1_file1.pdf
+[0m[34m[Server]: Incoming file from sender6: 'file6.pdf' (2.15 MB)
+[0m[34m[Status]: Download progress: 75%
+[34m[Status]: Download progress: 75%
+[34m[Status]: Download progress: 100%
+[32m[Server]: '[Received]' 'file2.pdf' from 'sender2' (2.13 MB)
+[0m[32m[Server]: File saved as: downloads/sender2_file2.pdf
+[0m[34m[Status]: Download progress: 100%
+[32m[Server]: '[Received]' 'file3.pdf' from 'sender3' (1.34 MB)
+[0m[32m[Server]: File saved as: downloads/sender3_file3.pdf
+[0m[34m[Status]: Download progress: 25%
+[34m[Status]: Download progress: 100%
+[32m[Server]: '[Received]' 'file4.pdf' from 'sender4' (2.07 MB)
+[0m[32m[Server]: File saved as: downloads/sender4_file4.pdf
+[0m[34m[Status]: Download progress: 100%
+[32m[Server]: '[Received]' 'file5.pdf' from 'sender5' (1.24 MB)
+[0m[32m[Server]: File saved as: downloads/sender5_file5.pdf
+[0m[34m[Status]: Download progress: 50%
+[34m[Status]: Download progress: 75%
+[34m[Status]: Download progress: 100%
+[32m[Server]: '[Received]' 'file6.pdf' from 'sender6' (2.15 MB)
+[0m[32m[Server]: File saved as: downloads/sender6_file6.pdf
+[0m

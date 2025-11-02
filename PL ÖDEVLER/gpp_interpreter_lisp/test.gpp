@@ -1,0 +1,2 @@
+(defvar x 10)
+(set x (/ x 0))

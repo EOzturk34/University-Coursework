@@ -1,0 +1,12 @@
+Connecting to 127.0.0.1:8080...
+[32mConnected to server!
+[0m
+Enter your username: [32m[Server]: Welcome! Type /help for commands.
+[0m[36m[File Info]
+  Name: huge_test_file.pdf
+  Type: PDF Document
+  Size: 4.00 MB
+  Modified: 2025-05-31 18:37:24
+  Permissions: 644
+[0m[31m[Error]: File exceeds 3MB limit.
+[0m

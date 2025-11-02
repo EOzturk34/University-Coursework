@@ -1,0 +1,12 @@
+Connecting to 127.0.0.1:8080...
+[32mConnected to server!
+[0m
+Enter your username: [32m[Server]: Welcome! Type /help for commands.
+[0m[34m[Server]: Incoming file from fileuser1: 'test.pdf' (1.52 MB)
+[0m[34m[Status]: Download progress: 25%
+[34m[Status]: Download progress: 50%
+[34m[Status]: Download progress: 75%
+[34m[Status]: Download progress: 100%
+[32m[Server]: '[Received]' 'test.pdf' from 'fileuser1' (1.52 MB)
+[0m[32m[Server]: File saved as: downloads/fileuser1_test.pdf
+[0m

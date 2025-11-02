@@ -1,0 +1,204 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\PC\Desktop\QUIZ\simulation\modelsim
+vadder_32bit
+IzUD95Yc1]V610Sc7__XcT1
+VChU2:hc85ZYJg2RA;A[kW2
+Z1 dC:\Users\PC\Desktop\QUIZ\simulation\modelsim
+w1732576982
+8C:/Users/PC/Desktop/ProjectExam1/adder_32bit.v
+FC:/Users/PC/Desktop/ProjectExam1/adder_32bit.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/PC/Desktop/ProjectExam1 -O0
+!i10b 1
+!s100 391La@FggdD9_HdmC_?<01
+!s85 0
+!s108 1732780100.421000
+!s107 C:/Users/PC/Desktop/ProjectExam1/adder_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/ProjectExam1|C:/Users/PC/Desktop/ProjectExam1/adder_32bit.v|
+!s101 -O0
+valu
+I864?9m5CZn09Z99eOJmJI3
+VEQ3EP?EnZ77I]<N1LTQ^z0
+R1
+w1732578784
+8C:/Users/PC/Desktop/ProjectExam1/alu.v
+FC:/Users/PC/Desktop/ProjectExam1/alu.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Q9`R:Mm8d?0E`BfeL_m840
+!s85 0
+!s108 1732780100.358000
+!s107 C:/Users/PC/Desktop/ProjectExam1/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/ProjectExam1|C:/Users/PC/Desktop/ProjectExam1/alu.v|
+!s101 -O0
+valu_tb
+!i10b 1
+!s100 einUoh2<7Q1NF[eC[VZAM2
+IAOhn;PkhSHEgi?JaofNbg0
+VL;=kgzZ7GJ2Reg7Z1GkmR2
+R1
+w1732579258
+8C:/Users/PC/Desktop/ProjectExam1/alu_tb.v
+FC:/Users/PC/Desktop/ProjectExam1/alu_tb.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1732780163.155000
+!s107 C:/Users/PC/Desktop/ProjectExam1/alu_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/PC/Desktop/ProjectExam1/alu_tb.v|
+!s101 -O0
+o-work work -O0
+vbitwise_and
+IReT:mFJ0H<dEjZ77Cjzlf1
+VQQEf^WTX>UW<5G?zld@;l2
+R1
+w1732572476
+8C:/Users/PC/Desktop/ProjectExam1/bitwise_and.v
+FC:/Users/PC/Desktop/ProjectExam1/bitwise_and.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 V6E]FT`f4Eco@OeDN498c3
+!s85 0
+!s108 1732780100.294000
+!s107 C:/Users/PC/Desktop/ProjectExam1/bitwise_and.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/ProjectExam1|C:/Users/PC/Desktop/ProjectExam1/bitwise_and.v|
+!s101 -O0
+vbitwise_nor
+IY6P<>MKEDkSB4[>[6[GW[3
+VGVBoPgE8T65GO3mU_H_j32
+R1
+w1732578675
+8C:/Users/PC/Desktop/ProjectExam1/bitwise_nor.v
+FC:/Users/PC/Desktop/ProjectExam1/bitwise_nor.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 L_?^Kmde^;OAT[cWdbAE10
+!s85 0
+!s108 1732780100.237000
+!s107 C:/Users/PC/Desktop/ProjectExam1/bitwise_nor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/ProjectExam1|C:/Users/PC/Desktop/ProjectExam1/bitwise_nor.v|
+!s101 -O0
+vbitwise_or
+IzKi^7a?iG42DJHSe>IdQF2
+VlMK_@ZVnU=ZIP75:jNm091
+R1
+w1732572503
+8C:/Users/PC/Desktop/ProjectExam1/bitwise_or.v
+FC:/Users/PC/Desktop/ProjectExam1/bitwise_or.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 cAGhU;O^FjHLCUh2Q`Y4D1
+!s85 0
+!s108 1732780100.180000
+!s107 C:/Users/PC/Desktop/ProjectExam1/bitwise_or.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/ProjectExam1|C:/Users/PC/Desktop/ProjectExam1/bitwise_or.v|
+!s101 -O0
+vbitwise_xor
+ID^S?DnGKDYfM[:A3KV4^82
+V?0?me`;l8H6IcQaDLRZ_W2
+R1
+w1732572526
+8C:/Users/PC/Desktop/ProjectExam1/bitwise_xor.v
+FC:/Users/PC/Desktop/ProjectExam1/bitwise_xor.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ;JM:2]7AzMI;9T]mi[17z0
+!s85 0
+!s108 1732780100.122000
+!s107 C:/Users/PC/Desktop/ProjectExam1/bitwise_xor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/ProjectExam1|C:/Users/PC/Desktop/ProjectExam1/bitwise_xor.v|
+!s101 -O0
+vfull_adder
+IYiMX0LKTzgSQjFR59?T5c1
+VDXIz@A8ZlZIe0^?_MInkU1
+R1
+w1732579325
+8C:/Users/PC/Desktop/ProjectExam1/full_adder.v
+FC:/Users/PC/Desktop/ProjectExam1/full_adder.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 R_L2CfZ`j:i2P<PNU;56z2
+!s85 0
+!s108 1732780100.063000
+!s107 C:/Users/PC/Desktop/ProjectExam1/full_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/ProjectExam1|C:/Users/PC/Desktop/ProjectExam1/full_adder.v|
+!s101 -O0
+vmux_8to1
+ICGzZ1JbFoh9SE8CjU4F9o0
+Va9nPBPmZO_n85^XT=L6VC2
+R1
+w1732575460
+8C:/Users/PC/Desktop/ProjectExam1/mux_8to1.v
+FC:/Users/PC/Desktop/ProjectExam1/mux_8to1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 [JSLQIg??^QQkPMV9zWY<1
+!s85 0
+!s108 1732780100.006000
+!s107 C:/Users/PC/Desktop/ProjectExam1/mux_8to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/ProjectExam1|C:/Users/PC/Desktop/ProjectExam1/mux_8to1.v|
+!s101 -O0
+vsubtractor_32bit
+IE[H?A`hWS_nhXO@=SjG<E2
+VHcP:IHJE?BzK@F^FYj<?M3
+R1
+w1732579511
+8C:/Users/PC/Desktop/ProjectExam1/subtractor_32bit.v
+FC:/Users/PC/Desktop/ProjectExam1/subtractor_32bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 8nKICc??bnlkg7Kd;4@Sg3
+!s85 0
+!s108 1732780099.916000
+!s107 C:/Users/PC/Desktop/ProjectExam1/subtractor_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/PC/Desktop/ProjectExam1|C:/Users/PC/Desktop/ProjectExam1/subtractor_32bit.v|
+!s101 -O0

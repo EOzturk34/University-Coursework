@@ -1,0 +1,7 @@
+sID,pID,branch,current_stock
+1,1,Hatay,51
+2,2,Sivas,100
+3,1,Hatay,425
+4,4,Kocaeli,428
+5,3,Ordu,412
+6,1,Hatay,85

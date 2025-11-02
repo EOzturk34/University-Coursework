@@ -1,0 +1,13 @@
+Connecting to 127.0.0.1:8080...
+[32mConnected to server!
+[0m
+Enter your username: [32m[Server]: Welcome! Type /help for commands.
+[0m[33m[Warning]: File not found locally. Using simulated size: 2.36 MB
+[0m[32m[Server]: File 'report.pdf' (2.36 MB) added to upload queue at position 1.
+[0m[33m[Server]: Processing file 'report.pdf' (2.36 MB)...
+[0m[33m[Server]: Upload progress: 25%
+[0m[33m[Server]: Upload progress: 50%
+[0m[33m[Server]: Upload progress: 75%
+[0m[33m[Server]: Upload progress: 100%
+[0m[32m[Server]: File 'report.pdf' sent successfully to dupreceiver!
+[0m

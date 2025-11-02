@@ -1,0 +1,12 @@
+Connecting to 127.0.0.1:8080...
+[32mConnected to server!
+[0m
+Enter your username: [32m[Server]: Welcome! Type /help for commands.
+[0m[32m[Server]: You joined the room 'room1'
+[0m[Server]: roomswitcher joined the room
+[32m[Server]: Message sent to room
+[0m[32m[Server]: You joined the room 'room2'
+[0m[Server]: roomswitcher joined the room
+[32m[Server]: Message sent to room
+[0m[32m[Server]: You rejoined the room 'room1'
+[0m[Server]: roomswitcher rejoined the room

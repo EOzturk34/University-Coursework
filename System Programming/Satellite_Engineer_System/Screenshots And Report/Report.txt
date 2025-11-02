@@ -1,0 +1,127 @@
+Satellite Ground Station Communication System
+
+Project Overview
+This project implements a communication system for a satellite ground station that coordinates between Earth and multiple satellites. The system simulates three engineers assisting satellites with varying priority levels. Satellites arrive randomly, request engineer support, and have a limited connection window to establish communication.
+
+Design Principles
+The system is designed using multithreading principles with proper synchronization mechanisms to handle concurrent satellite requests. Key design principles include:
+
+1. Priority-based Scheduling: Satellites with higher priority are served first.
+2. Timeout Mechanism: Satellites abort their update if no engineer becomes available within the connection window.
+3. Thread Synchronization: Using semaphores and mutexes to coordinate between satellite and engineer threads.
+
+Data Structures
+
+SatelliteRequest Structure
+A structure to represent satellite requests with the following attributes:
+- Satellite ID
+- Priority level
+- Mutex for thread-safe operations
+- Semaphore for signaling when the request is handled
+- Active status flag
+
+Priority Queue
+A priority queue implementation to manage satellite requests based on their priority levels. The queue ensures that higher priority satellites are served before lower priority ones. Functions include:
+- addToQueue: Adds a request to the queue based on priority
+- removeHighestPriority: Removes and returns the highest priority request
+
+Shared Resources
+
+Global Variables
+- availableEngineers: Counter for available engineers
+- engineerMutex: Mutex to protect shared resources
+- newRequest: Semaphore signaled when a new satellite request arrives
+- allSatellitesProcessed: Flag to indicate when all satellites have been processed
+
+Functions
+
+Main Thread Functions
+- int main(): Initializes resources, creates engineer and satellite threads, and waits for completion
+
+Satellite-Related Functions
+- void* satellite(void* arg): Represents a satellite requesting a connection
+- void* timeoutHandler(void* arg): Handles timeout for a satellite if no engineer becomes available
+
+Engineer-Related Functions
+- void* engineer(void* arg): Represents an engineer ready to serve satellite requests
+
+Synchronization Mechanisms
+
+Semaphores
+- newRequest: Signaled by satellites when a new request arrives
+- requestHandled: Signaled by engineers once they pick up a satellite request
+
+Mutexes
+- engineerMutex: Protects shared resources like availableEngineers and requestQueue
+- Individual mutexes in each SatelliteRequest structure
+
+Algorithm Description
+
+1. Satellite Thread:
+   - Creates a request with a random priority level
+   - Adds the request to the priority queue
+   - Signals the arrival of a new request
+   - Waits for an engineer to handle the request or times out
+
+2. Engineer Thread:
+   - Waits for new requests
+   - Retrieves the highest priority request from the queue
+   - Processes the satellite's request
+   - Signals completion and becomes available for new requests
+
+3. Timeout Mechanism:
+   - Each satellite has a dedicated timeout thread
+   - If the timeout expires before an engineer handles the request, the satellite abandons the update
+
+Test Results
+
+When running the program, the following behavior was observed:
+
+
+[SATELLITE] Satellite 0 requesting (priority 4)
+[ENGINEER 1] Handling Satellite 0 (Priority 4)
+[SATELLITE] Satellite 1 requesting (priority 2)
+[ENGINEER 2] Handling Satellite 1 (Priority 2)
+[SATELLITE] Satellite 2 requesting (priority 2)
+[ENGINEER 0] Handling Satellite 2 (Priority 2)
+[SATELLITE] Satellite 3 requesting (priority 1)
+[ENGINEER 1] Finished Satellite 0
+[ENGINEER 1] Handling Satellite 3 (Priority 1)
+[SATELLITE] Satellite 4 requesting (priority 2)
+[ENGINEER 2] Finished Satellite 1
+[ENGINEER 2] Handling Satellite 4 (Priority 2)
+[ENGINEER 1] Finished Satellite 3
+[ENGINEER 0] Finished Satellite 2
+[ENGINEER 2] Finished Satellite 4
+[ENGINEER 1] Exiting...
+[ENGINEER 0] Exiting...
+[ENGINEER 2] Exiting...
+
+
+This output demonstrates that:
+1. Satellites request updates with varying priority levels
+2. Engineers handle satellites based on priority order
+3. All satellites are successfully processed
+4. Engineers properly exit after all tasks are completed
+
+Memory Management
+
+The program properly manages memory by:
+1. Freeing dynamically allocated memory
+2. Destroying mutexes and semaphores when they are no longer needed
+3. Ensuring no memory leaks occur
+
+Compile and Run Instructions
+
+The project includes a Makefile with the following commands:
+- make: Compiles the program
+- make clean: Removes the compiled executable
+
+To run the program:
+
+./hw3
+
+
+Conclusion
+
+This implementation successfully meets all the requirements specified for the satellite ground station communication system. The program correctly handles priority-based scheduling, implements proper timeout mechanisms, and ensures thread-safe operations through appropriate synchronization mechanisms. The output demonstrates that the system works as expected, with engineers serving satellites based on their priorities and properly exiting when all tasks are completed.

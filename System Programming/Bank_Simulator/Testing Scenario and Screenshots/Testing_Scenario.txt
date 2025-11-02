@@ -1,0 +1,17 @@
+A terminal is run for the server.
+Another terminal is run for the client.
+The server is started. If it cannot be started, an error message is printed.
+If the log file is not empty, accounts information are loaded when the system starts.
+3 client files (client01, client02, client03) with 20 clients in each are sent to the server via the client terminal and processed respectively.
+If the server cannot be started, the client terminal prints an error message.
+It is shown that the transactions in different files for the same bank account change the status of that bank account correctly.
+An invalid transaction (deposittt) request remains unanswered and the request is not sent, and a message is printed on the client terminal.
+Accounts with a zero balance are closed and "#" is placed in front of their information.
+Withdrawing transactions exceeding the balance are prevented and the message is printed.
+The server terminal is terminated with Ctrl+C.
+The log is printed on the server terminal with the command "Cat AdaBank.bankLog".
+
+Sample command for server terminal: ./bank_simulator BankServer AdaBank ServerFIFO_Name
+
+Sample command for client terminal: ./bank_simulator BankClient client01 \#ServerFIFO_Name
+

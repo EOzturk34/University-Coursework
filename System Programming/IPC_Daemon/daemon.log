@@ -1,0 +1,40 @@
+[2025-04-07 21:25:31] DAEMON: Logger initialized
+[2025-04-07 21:25:31] DAEMON: Standard file descriptors redirected
+[2025-04-07 21:25:31] DAEMON: Signal handlers set up successfully
+[2025-04-07 21:25:31] DAEMON: Daemon process initialized successfully
+[2025-04-07 21:25:31] INFO: FIFO1 created successfully
+[2025-04-07 21:25:31] INFO: FIFO2 created successfully
+[2025-04-07 21:25:31] PARENT: Created child 1 with PID: 7316
+[2025-04-07 21:25:31] PARENT: Created child 2 with PID: 7318
+[2025-04-07 21:25:31] INFO: Opening FIFO1 for writing
+[2025-04-07 21:25:31] CHILD1: Child 1 (PID: 7316) started
+[2025-04-07 21:25:31] DAEMON: FIFO set to non-blocking mode
+[2025-04-07 21:25:31] INFO: Writing numbers 45 and 578 to FIFO1
+[2025-04-07 21:25:31] INFO: Data written to FIFO1 successfully
+[2025-04-07 21:25:31] CHILD2: Child 2 (PID: 7318) started
+[2025-04-07 21:25:31] CHILD1: Child 1: Read numbers 45 and 578 from FIFO1
+[2025-04-07 21:25:31] CHILD1: Child 1: Larger number is 578
+[2025-04-07 21:25:31] CHILD1: Child 1: Wrote command and larger number to FIFO2
+[2025-04-07 21:25:31] CHILD1: Child 1: Sleeping for 10 seconds
+[2025-04-07 21:25:31] DAEMON: FIFO set to non-blocking mode
+[2025-04-07 21:25:31] CHILD2: Child 2: Read command 'FIND_LARGER' from FIFO2
+[2025-04-07 21:25:31] CHILD2: Child 2: The larger number is: 578
+[2025-04-07 21:25:31] CHILD2: Child 2: Sleeping for 10 seconds
+[2025-04-07 21:25:32] PARENT: Entering main loop
+[2025-04-07 21:25:32] PARENT: Proceeding... (counter = 0)
+[2025-04-07 21:25:34] PARENT: Proceeding... (counter = 0)
+[2025-04-07 21:25:36] PARENT: Proceeding... (counter = 0)
+[2025-04-07 21:25:38] PARENT: Proceeding... (counter = 0)
+[2025-04-07 21:25:40] PARENT: Proceeding... (counter = 0)
+[2025-04-07 21:25:41] CHILD1: Child 1: Exiting now
+[2025-04-07 21:25:41] PARENT: Child process 7316 terminated
+[2025-04-07 21:25:41] PARENT: Child 7316 exited with status 0
+[2025-04-07 21:25:41] PARENT: Child counter is now 2
+[2025-04-07 21:25:41] PARENT: Proceeding... (counter = 2)
+[2025-04-07 21:25:41] CHILD2: Child 2: Exiting now
+[2025-04-07 21:25:41] PARENT: Child process 7318 terminated
+[2025-04-07 21:25:41] PARENT: Child 7318 exited with status 0
+[2025-04-07 21:25:41] PARENT: Child counter is now 4
+[2025-04-07 21:25:41] PARENT: All children have terminated. Exiting
+[2025-04-07 21:25:41] PARENT: Resources cleaned up
+[2025-04-07 21:25:41] DAEMON: Daemon shutting down

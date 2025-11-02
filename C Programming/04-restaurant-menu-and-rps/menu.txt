@@ -1,0 +1,10 @@
+Lahmacun  10.10
+Pide      15.15
+Doner     20.20
+Pilav     25.25
+Izagara   30.30
+Tost      35.35
+Gullac    40.40
+Sutlac    45.45
+Tulumba   50.50
+Pastırma  55.55

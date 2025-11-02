@@ -1,0 +1,129 @@
+CSE 344 Midterm Project Report
+A Simple Bank Simulator
+1. Introduction
+This report presents the implementation details of a client-server banking simulator developed as part of CSE 344 System Programming midterm project. The system simulates a bank where clients can perform transactions such as deposits and withdrawals through teller processes created by the main bank server. The implementation features inter-process communication mechanisms, signal handling, and resource management to ensure reliable operation.
+2. System Architecture
+The system follows a client-server architecture with the following key components:
+2.1 Bank Server
+The bank server acts as the central component responsible for:
+* Managing the bank database (accounts)
+* Creating teller processes to handle client requests
+* Updating the log file to maintain transaction records
+* Handling signals and performing graceful shutdown
+2.2 Teller Processes
+For each client request, the server creates a dedicated teller process that:
+* Communicates with clients through named pipes (FIFOs)
+* Processes deposit and withdrawal operations
+* Validates client requests and forwards them to the server
+* Returns transaction results to clients
+2.3 Client Processes
+Client processes:
+* Read transaction requests from client files
+* Connect to the server via a server FIFO
+* Create their own client FIFO for receiving responses
+* Send transaction requests and display results
+3. Design Decisions
+3.1 Communication Mechanisms
+3.1.1 Server-Client Communication
+* Named Pipes (FIFOs): The server creates a FIFO that clients use to send their initial connection requests.
+* Client-specific FIFOs: Each client creates its own FIFO for receiving responses from tellers.
+3.1.2 Server-Teller Communication
+* Shared Memory: Used for passing request and response data between the server and teller processes.
+* Semaphores: Used for synchronization to ensure proper access to shared resources.
+3.2 Process Management
+* Custom Teller Function: Instead of using standard fork() directly, a custom Teller() function was implemented that creates a process which only executes the specified function.
+* Listener Process: A dedicated server listener process was created to handle requests from tellers and maintain server responsiveness.
+3.3 Data Structures
+Several key data structures were designed to organize the system:
+* ClientMessage: Contains client requests (operation type, amount, account ID)
+* TellerResponse: Contains server responses to clients
+* Account: Stores account information (balance, transaction history)
+* Transaction: Records transaction details for logging
+* SharedMemory: Facilitates data exchange between server and tellers
+3.4 Synchronization
+The system employs three semaphores to ensure proper synchronization:
+* SEM_REQUEST_READY: Signals that a new request from a teller is ready
+* SEM_RESPONSE_READY: Signals that the server's response is ready
+* SEM_MUTEX: Provides mutual exclusion for shared memory access
+3.5 Error Handling
+The implementation includes error handling with:
+* Defined error codes for various failure conditions
+* Detailed error messages for client feedback
+4. Implementation Details
+4.1 Bank Server Implementation
+The server is initialized with:
+* Signal handlers for graceful termination
+* Memory allocation for transaction logs
+* Shared memory and semaphore setup
+* Loading of previous account data from log files
+Key server processes include:
+* init_server(): Initializes server resources
+* create_server_fifo(): Creates the named pipe for client connections
+* wait_for_clients(): Main loop that accepts client connections
+* create_teller_process(): Creates teller processes using the custom Teller function
+* process_client_request(): Processes requests from tellers
+* server_listener_process(): Dedicated process for handling teller requests
+4.2 Account Management
+The server manages accounts with:
+* create_account(): Creates new accounts for first-time clients
+* close_account(): Closes accounts when balance reaches zero
+* update_account(): Updates account balance for deposits/withdrawals
+* find_account_index(): Locates account records in the database
+* record_transaction(): Records transaction details for logging
+4.3 IPC Mechanisms
+IPC is implemented with:
+* setup_shared_memory(): Creates shared memory segments
+* setup_semaphores(): Initializes semaphores for synchronization
+* sem_operation(): Helper function for semaphore operations
+* Named pipes for client-server communication
+4.4 Teller Implementation
+Tellers are implemented with:
+* Teller(): Custom process creation function that executes only the specified function
+* deposit(): Handles deposit operations
+* withdraw(): Handles withdrawal operations
+* waitTeller(): Custom wait function for teller processes
+4.5 Client Implementation
+The client program features:
+* init_client(): Initializes client resources
+* read_client_file(): Reads transaction requests from client files
+* create_client_fifo(): Creates client-specific named pipes
+* connect_to_server(): Establishes connection to the server
+* send_request(): Sends transaction requests
+* receive_response(): Receives and processes server responses
+4.6 Logging and Persistence
+The system maintains persistence through:
+* update_log_file(): Updates the bank database log file
+* load_from_log_file(): Loads account data from log files at startup
+5. Signal Handling and Resource Management
+5.1 Signal Handling
+The implementation handles signals appropriately:
+* SIGINT/SIGTERM: For graceful shutdown of server and client processes
+* Signal handlers ensure proper cleanup of resources
+* The bank database is updated before shutdown
+5.2 Resource Cleanup
+Resources are properly managed with:
+* cleanup_ipc_resources(): Cleans up shared memory and semaphores
+* cleanup_resources_server(): Handles server-side cleanup
+* cleanup_resources_client(): Handles client-side cleanup
+* graceful_shutdown(): Ensures proper shutdown sequence
+6. Testing and Verification
+6.1 Test Scenarios
+The system was tested with various scenarios:
+1. Normal Operation: Multiple clients performing valid transactions
+2. Edge Cases:
+    * New account creation
+    * Account closure on zero balance
+    * Insufficient funds handling
+3. Error Handling:
+    * Invalid operations
+    * Server unavailability
+    * Signal interruptions
+6.2 Concurrency Testing
+The system was tested with up to 20 concurrent clients to verify:
+* Proper synchronization between processes
+* Correct handling of simultaneous transactions
+* No race conditions in account updates
+7. Conclusion
+The implemented banking simulator successfully meets all the requirements specified in the project. It demonstrates proper use of inter-process communication mechanisms, signal handling, and resource management while maintaining a clean separation of concerns between server, teller, and client components.
+The full credit implementation using custom Teller process creation and IPC through shared memory and semaphores enhances the system's modularity and efficiency. The system effectively manages concurrent client connections and ensures data integrity through proper synchronization.
+

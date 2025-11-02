@@ -1,0 +1,7 @@
+pID,type,name,brand,price
+1,d,kola,pepsi,25
+2,f,gofret,ulker,12
+3,o,tablet,Samsung,10000
+4,d,gazoz,pepsi,78
+5,o,bilgisayar,Samsung,50000
+6,f,biskuvi,ulker,15

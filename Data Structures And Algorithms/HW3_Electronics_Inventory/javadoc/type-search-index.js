@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"EmrePack","l":"Computer"},{"p":"EmrePack","l":"Device"},{"p":"EmrePack","l":"Inventory"},{"p":"EmrePack","l":"Laptop"},{"p":"EmrePack","l":"SmartPhone"},{"p":"EmrePack","l":"SmartWatch"},{"p":"EmrePack","l":"TV"}];updateSearchResults();

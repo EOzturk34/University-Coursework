@@ -1,0 +1,8 @@
+00000001  // Data at address 0x0000
+00000002  // Data at address 0x0004
+00000003  // Data at address 0x0008 (Bu değeri SW komutuyla yazacağız)
+00000004  // Data at address 0x000C
+00000005  // Data at address 0x0010
+00000006  // Data at address 0x0014
+00000007  // Data at address 0x0018
+00000008  // Data at address 0x001C
